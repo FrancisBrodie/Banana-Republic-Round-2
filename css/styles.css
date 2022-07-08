@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: grey;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.main {
+    width: 90vw;
+    height: 80vh;
+    background-color: #fff;
+    margin: 5rem auto;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.profile {
+    width: 30vw;
+    height: 80vh;
+    background-color: rgb(255, 213, 0);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: .5rem;
+    color: #3b3b3b;
+    z-index: 1;
+}
+
+.profile__img {
+    width: 30vw;
+    height: 30vh;
+    margin: 2.5rem auto;
+}
+
+.profile__paragraph {
+    padding: 2rem 5rem;
+}
+
+.profile__arrow {
+    background: #3b3b3b;
+    border-radius: 50%;
+    padding: 1rem;
+    width: 2vw;
+    height: 4vh;
+    transition: rotate 1s ease-in-out;
+}
+
+.checkbox:checked~.profile .profile__arrow {
+    rotate: 180deg;
+}
+
+.slider {
+    background-color: rgb(255, 145, 0);
+    color: #3b3b3b;
+    transform: translateX(-1300px);
+    transition: transform 1s ease-in-out;
+}
+
+.slider__content {
+    margin: 8rem 8rem 8rem 4rem;
+}
+
+.slider__paragraph {
+    padding: 2rem 4rem 2rem 0;
+    line-height: 1.5rem;
+}
+
+.checkbox:checked~.slider {
+    transform: translateX(0px);
+}
+
+@keyframes slidein {
+    0% {
+
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 100%;
+        opacity: 1;
+    }
+}
