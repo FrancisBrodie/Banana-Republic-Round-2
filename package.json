@@ -1,0 +1,22 @@
+{
+  "name": "banana-republic-round-2",
+  "version": "1.0.0",
+  "description": "## Getting started",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancisBrodie/Banana-Republic-Round-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancisBrodie/Banana-Republic-Round-2/issues"
+  },
+  "homepage": "https://github.com/FrancisBrodie/Banana-Republic-Round-2#readme",
+  "dependencies": {
+    "serve": "^13.0.4"
+  }
+}
