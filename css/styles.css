@@ -35,14 +35,22 @@ body {
     z-index: 4;
 }
 
+.heading {
+    color: #3b3b3b;
+    font-size: 1.5rem;
+}
+
 .profile__img {
     width: 30vw;
     height: 30vh;
     margin: 2.5rem auto;
+    padding: .5rem;
+    object-fit: fill;
 }
 
 .profile__paragraph {
     padding: 2rem 5rem;
+    font-size: 1rem;
 }
 
 .profile__arrow {
@@ -65,13 +73,16 @@ body {
     transition: transform 1s ease-in-out;
 }
 
-.slider__content {
-    margin: 8rem 8rem 8rem 4rem;
+
+.slider__heading {
+    margin: 8rem 8rem 0rem 4rem;
+
 }
 
 .slider__paragraph {
     padding: 2rem 4rem 2rem 0;
     line-height: 1.5rem;
+    margin: 0rem 8rem 8rem 4rem;
 }
 
 .checkbox:checked~.slider {
@@ -85,15 +96,312 @@ body {
 
 }
 
-.signup {
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    width: 60vw;
-    flex-direction: column;
-}
-
 .checkbox:checked~.sign-up__container {
     transform: translateX(-1000px);
+}
+
+.sign-up__form {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-evenly;
+    align-items: flex-end;
+    width: 45vw;
+    padding: 1rem 4rem 1rem 1rem;
+    margin: 1rem 4rem 0 0rem;
+}
+
+.sign-up__input {
+    width: 15rem;
+    padding: .5rem 1rem;
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: .5rem;
+    font-family: 'josefin sands', sans-serif;
+    font-size: 1rem;
+    color: #3b3b3b;
+    letter-spacing: .05rem;
+    outline: none;
+    border: .1rem solid rgb(195, 195, 195);
+    transition: background-color .3s;
+    margin: .9rem 2rem;
+
+}
+
+.sign-up__input:focus {
+    background-color: rgb(248, 248, 248);
+    color: rgb(255, 145, 0);
+    outline: rgb(255, 145, 0);
+    border: 1px solid rgb(255, 145, 0);
+}
+
+.sign-up__label:focus {
+    color: rgb(255, 145, 0);
+}
+
+.sign-up__gender {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    text-align: center;
+    margin: .5rem 2rem;
+    padding: 0 .5rem;
+    color: #3b3b3b;
+}
+
+.sign-up__gender p {
+    text-align: baseline;
+    margin-right: 4.5rem;
+}
+
+.sign-up__gender img {
+    background: #ccc;
+    border-radius: 50%;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    object-fit: scale-down;
+    padding: 0.3rem;
+    margin: 0 .8rem;
+    transition: background 1s ease-in-out;
+}
+
+.sign-up__input--male:checked~.click--male img {
+    background: #3b3b3b;
+}
+
+.sign-up__input--female:checked~.click--female img {
+    background: #3b3b3b;
+}
+
+.sign-up__calendar {
+    position: relative;
+}
+
+.sign-up__calendar__img {
+    position: absolute;
+    top: 1.4rem;
+    right: 2.5rem;
+    cursor: pointer;
+}
+
+.sign-up__form fieldset {
+    width: 50vw;
+    border: none;
+}
+
+
+.sign-up__membership {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    text-align: center;
+    margin: .5rem 2rem;
+    padding: 0 .5rem;
+    color: #3b3b3b;
+}
+
+.sign-up__membership p {
+    text-align: baseline;
+
+}
+
+.sign-up__membership img {
+    background: #ccc;
+    border-radius: 50%;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    object-fit: scale-down;
+    padding: 0.3rem;
+    margin: 0 .5rem;
+    transition: background 1s ease-in-out;
+}
+
+.sign-up__input--classic:checked~.click--classic img {
+    background: #3b3b3b;
+}
+
+.sign-up__input--silver:checked~.click--silver img {
+    background: #3b3b3b;
+}
+
+.sign-up__input--gold:checked~.click--gold img {
+    background: #3b3b3b;
+}
+
+
+.form__button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.cancel__button {
+    background-color: lightgray;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.save__button {
+    background-color: #39b298;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+@media(max-width: 1024px) {
+
+    .heading {
+        font-size: 1.3rem;
+    }
+
+    .profile__img {
+        width: 25vw;
+        height: 25vh;
+        margin: 2rem auto;
+
+    }
+
+    .profile__paragraph {
+        padding: 2rem 2rem;
+        font-size: 1rem;
+    }
+
+    .profile__arrow {
+        padding: 1rem;
+        width: 2vw;
+        height: 3vh;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .heading {
+        font-size: .9rem;
+    }
+
+    .profile__img {
+        width: 20vw;
+        height: 25vh;
+        margin: 2rem auto;
+
+    }
+
+    .profile__paragraph {
+        padding: 1.7rem 1rem;
+        font-size: .8rem;
+    }
+
+    .profile__arrow {
+        padding: 1rem;
+        width: 2vw;
+        height: 1.9vh;
+    }
+
+    .slider__heading {
+        margin: 4rem 8rem 0rem 4rem;
+
+    }
+
+    .slider__paragraph {
+        padding: 2rem 4rem 2rem 0;
+        margin: 0rem 4rem 8rem 4rem;
+    }
+
+    .sign-up__container {
+        font-size: .8rem;
+    }
+
+    .sign-up__form {
+        padding: .5rem 2rem .5rem .5rem;
+        margin: .5rem 2rem 0 0rem;
+    }
+
+    .sign-up__input {
+        width: 10rem;
+        padding: .5rem 1rem;
+        font-size: .8rem;
+        letter-spacing: .03rem;
+        margin: .9rem 1rem;
+    }
+
+    .sign-up__gender p {
+        margin-right: .5rem;
+    }
+
+    .sign-up__gender img {
+        width: 1rem;
+        height: 1rem;
+        object-fit: scale-down;
+        padding: 0.2rem;
+    }
+
+    .sign-up__calendar__img {
+        top: 1.4rem;
+        right: 2rem;
+    }
+
+    .sign-up__form fieldset {
+        width: 45vw;
+    }
+
+
+    .sign-up__membership {
+        margin: .3rem 1rem;
+    }
+
+    .sign-up__membership p {
+        margin-right: 1rem;
+    }
+
+    .sign-up__membership img {
+        width: 1rem;
+        height: 1rem;
+        object-fit: scale-down;
+        padding: 0.1rem;
+        margin: 0 .1rem;
+    }
+
+    .form__button {
+        margin: 20px 10px;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .main {
+        width: 50vw;
+        height: 100vh;
+        margin: 0;
+        background-color: grey;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 0 10rem;
+        overflow: visible;
+    }
+
+    .profile {
+        width: 50vw;
+        height: 100vh;
+        background-color: rgb(255, 213, 0);
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: .5rem;
+        color: #3b3b3b;
+        z-index: 4;
+    }
 
 }

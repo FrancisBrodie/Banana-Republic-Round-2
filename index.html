@@ -16,7 +16,7 @@
         <input type="checkbox" class="checkbox" id="click" hidden>
 
         <section class="profile">
-            <img src="img/face.svg" alt="profile_picture" class="profile__img">
+            <img src="img/face.svg" alt="profile-picture" class="profile__img">
             <h1 class="heading">Front-end Challenge</h1>
             <p class="profile__paragraph">This is a design that you will need to code up and impress us.</p>
 
@@ -26,34 +26,111 @@
         </section>
 
         <section class="sign-up__container">
-            <!-- <form class="signup">
-                <div class="signup__input-group">
-                    <p>Name</p>
-                    <input type="text" placeholder="Your full name">
-                </div>
-            </form> -->
 
-            <form method="post" action="/sign-up" class="signup">
-                <label class="form__label">
+            <form method="post" class="sign-up__form">
+                <label class="sign-up__label">
                     Name
-                    <input type="text" class="form__input" placeholder="Your full name">
+                    <input type="text" class="sign-up__input" placeholder="Your full name">
                 </label>
+
+
+                <fieldset class="sign-up__gender">
+                    <p>Gender</p>
+
+                    <input type="radio" name="gender" value="gender" class="sign-up__input--male" id="male" hidden>
+                    <div class="click--male">
+                        <label for="male">
+                            <img src="img/mars-symbol.svg" alt="">
+                            Male
+                        </label>
+                    </div>
+
+                    <input type="radio" name="gender" value="gender" class="sign-up__input--female" id="female" hidden>
+                    <div class="click--female">
+                        <label for="female">
+                            <img src="img/venus-symbol.svg" alt="" class="">
+                            Female
+                        </label>
+                    </div>
+                </fieldset>
+
+                <label class="sign-up__calendar">
+                    Date Of Birth
+                    <input type="date" class="sign-up__input" placeholder="DOB...">
+                    <img src="img/calendar.svg" alt="" class="sign-up__calendar__img">
+                </label>
+                <br>
+
+                <label class="sign-up__label">
+                    Email
+                    <input type="text" class="sign-up__input" placeholder="Your email address">
+                </label>
+                <br>
+
+                <label class="sign-up__label">
+                    Mobile
+                    <input type="text" class="sign-up__input" placeholder="+91 98765 43210">
+                </label>
+                <br>
+
+                <label class="sign-up__label">
+                    Customer ID
+                    <input type="text" class="sign-up__input" placeholder="576902-ERD0348 45">
+                </label>
+
+                <fieldset class="sign-up__membership">
+                    <p>Membership</p>
+
+                    <input type="radio" name="membership" value="membership" class="sign-up__input--classic"
+                        id="classic" hidden>
+                    <div class="click--classic">
+                        <label class="sign-up__label sign-up__label--membership" for="classic">
+                            <img src="img/card.svg" alt="">
+                            classic
+                        </label>
+                    </div>
+
+                    <input type="radio" name="membership" value="membership" class="sign-up__input--silver" id="silver"
+                        hidden>
+                    <div class="click--silver">
+                        <label class="sign-up__label--membership" for="silver">
+                            <img src="img/card.svg" alt="">
+                            Silver
+                        </label>
+                    </div>
+
+                    <input type="radio" name="membership" value="membership" class="sign-up__input--gold" id="gold"
+                        hidden>
+                    <div class="click--gold">
+                        <label class="sign-up__label--membership" for="gold">
+                            <img src="img/card.svg" alt="">
+                            Gold
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form__button">
+                    <input type="reset" value="Cancel" class="cancel__button">
+                    <input type="submit" value="Save" class="save__button">
+                </div>
+            </form>
+
         </section>
 
         <section class="slider">
-            <div class="slider__content">
-                <h1 class="heading">My World Today</h1>
-                <p class="slider__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero
-                    laudantium neque maiores
-                    minima<a href="#"> View all days</a>
-                    enim quibusdam autem, alias facilis possimus dolore quia aliquid cupiditate perferendis fugiat
-                    soluta
-                    illum non odit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, in maiores
-                    fugiat
-                    incidunt similique voluptate a iure sapiente ipsam tempore ullam nemo. Excepturi quam eveniet at
-                    in
-                    labore illum id?</p>
-            </div>
+
+            <h1 class="heading slider__heading">My World Today</h1>
+            <p class="slider__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero
+                laudantium neque maiores
+                minima<a href="#"> View all days</a>
+                enim quibusdam autem, alias facilis possimus dolore quia aliquid cupiditate perferendis fugiat
+                soluta
+                illum non odit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, in maiores
+                fugiat
+                incidunt similique voluptate a iure sapiente ipsam tempore ullam nemo. Excepturi quam eveniet at
+                in
+                labore illum id?</p>
+
         </section>
 
     </main>
