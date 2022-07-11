@@ -86,9 +86,11 @@ body {
 }
 
 .signup {
-    transform: translateX(0px);
-    height: 100vh;
-    width: 100vw;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    width: 60vw;
+    flex-direction: column;
 }
 
 .checkbox:checked~.sign-up__container {

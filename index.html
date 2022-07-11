@@ -10,8 +10,11 @@
 </head>
 
 <body>
+
     <main class="main">
+
         <input type="checkbox" class="checkbox" id="click" hidden>
+
         <section class="profile">
             <img src="img/face.svg" alt="profile_picture" class="profile__img">
             <h1 class="heading">Front-end Challenge</h1>
@@ -23,12 +26,18 @@
         </section>
 
         <section class="sign-up__container">
-            <form class="signup">
+            <!-- <form class="signup">
                 <div class="signup__input-group">
                     <p>Name</p>
                     <input type="text" placeholder="Your full name">
                 </div>
-            </form>
+            </form> -->
+
+            <form method="post" action="/sign-up" class="signup">
+                <label class="form__label">
+                    Name
+                    <input type="text" class="form__input" placeholder="Your full name">
+                </label>
         </section>
 
         <section class="slider">
@@ -46,7 +55,6 @@
                     labore illum id?</p>
             </div>
         </section>
-
 
     </main>
 </body>
