@@ -12,7 +12,8 @@
 <body>
 
     <main class="main">
-
+        <!-- profile side section -->
+        <!-- slider -->
         <input type="checkbox" class="checkbox" id="click" hidden>
 
         <section class="profile">
@@ -25,9 +26,16 @@
             </label>
         </section>
 
+        <!-- end of profile side section -->
+
+
+        <!-- sign up form  -->
+
+        <!-- if this form had gotten any bigger I would've added an onClick event listener to toggle the background color of the selected icons in the fieldset, for uniform and the fact that this is a small program I have not, but I have really thought about best practice here -->
         <section class="sign-up__container">
 
             <form method="post" class="sign-up__form">
+
                 <label class="sign-up__label">
                     Name
                     <input type="text" class="sign-up__input" placeholder="Your full name">
@@ -38,7 +46,7 @@
                     <p>Gender</p>
 
                     <input type="radio" name="gender" value="gender" class="sign-up__input--male" id="male" hidden>
-                    <div class="click--male">
+                    <div class="click--male sign-up__label--male ">
                         <label for="male">
                             <img src="img/mars-symbol.svg" alt="">
                             Male
@@ -46,7 +54,7 @@
                     </div>
 
                     <input type="radio" name="gender" value="gender" class="sign-up__input--female" id="female" hidden>
-                    <div class="click--female">
+                    <div class="click--female sign-up__label--female">
                         <label for="female">
                             <img src="img/venus-symbol.svg" alt="" class="">
                             Female
@@ -59,19 +67,16 @@
                     <input type="date" class="sign-up__input" placeholder="DOB...">
                     <img src="img/calendar.svg" alt="" class="sign-up__calendar__img">
                 </label>
-                <br>
 
                 <label class="sign-up__label">
                     Email
                     <input type="text" class="sign-up__input" placeholder="Your email address">
                 </label>
-                <br>
 
                 <label class="sign-up__label">
                     Mobile
                     <input type="text" class="sign-up__input" placeholder="+91 98765 43210">
                 </label>
-                <br>
 
                 <label class="sign-up__label">
                     Customer ID
@@ -83,7 +88,7 @@
 
                     <input type="radio" name="membership" value="membership" class="sign-up__input--classic"
                         id="classic" hidden>
-                    <div class="click--classic">
+                    <div class="click--classic sign-up__label--classic">
                         <label class="sign-up__label sign-up__label--membership" for="classic">
                             <img src="img/card.svg" alt="">
                             classic
@@ -92,7 +97,7 @@
 
                     <input type="radio" name="membership" value="membership" class="sign-up__input--silver" id="silver"
                         hidden>
-                    <div class="click--silver">
+                    <div class="click--silver sign-up__label--silver">
                         <label class="sign-up__label--membership" for="silver">
                             <img src="img/card.svg" alt="">
                             Silver
@@ -101,7 +106,7 @@
 
                     <input type="radio" name="membership" value="membership" class="sign-up__input--gold" id="gold"
                         hidden>
-                    <div class="click--gold">
+                    <div class="click--gold sign-up__label--gold">
                         <label class="sign-up__label--membership" for="gold">
                             <img src="img/card.svg" alt="">
                             Gold
@@ -110,13 +115,18 @@
                 </fieldset>
 
                 <div class="form__button">
-                    <input type="reset" value="Cancel" class="cancel__button">
-                    <input type="submit" value="Save" class="save__button">
+                    <button type="reset" class="cancel__button">Cancel</button>
+                    <button type="reset" class="save__button">Save</button>
+
+
                 </div>
             </form>
 
         </section>
 
+        <!-- end of sign up form  -->
+
+        <!-- slider content -->
         <section class="slider">
 
             <h1 class="heading slider__heading">My World Today</h1>
@@ -132,6 +142,8 @@
                 labore illum id?</p>
 
         </section>
+
+        <!-- end of slider -->
 
     </main>
 </body>

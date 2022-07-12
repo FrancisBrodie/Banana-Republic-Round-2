@@ -23,6 +23,8 @@ body {
     overflow: hidden;
 }
 
+/* profile side section */
+
 .profile {
     width: 30vw;
     height: 80vh;
@@ -57,8 +59,8 @@ body {
     background: #3b3b3b;
     border-radius: 50%;
     padding: 1rem;
-    width: 2vw;
-    height: 4vh;
+    width: 2rem;
+    height: 2rem;
     transition: rotate 1s ease-in-out;
 }
 
@@ -66,6 +68,10 @@ body {
     rotate: 180deg;
 }
 
+/* end of profile side section */
+
+
+/* slider */
 .slider {
     background-color: rgb(255, 145, 0);
     color: #3b3b3b;
@@ -85,14 +91,29 @@ body {
     margin: 0rem 8rem 8rem 4rem;
 }
 
+.slider a {
+    color: #3b3b3b;
+    font-weight: bold;
+}
+
+.slider a:visited {
+    accent-color: var(--accent-color);
+}
+
 .checkbox:checked~.slider {
     transform: translateX(0px);
 
 }
 
+/* end of slider */
+
+
+/* sign up form  */
+
 .sign-up__container {
     width: 0px;
     transition: transform 1s ease-in-out;
+    color: #3b3b3b;
 
 }
 
@@ -108,6 +129,10 @@ body {
     width: 45vw;
     padding: 1rem 4rem 1rem 1rem;
     margin: 1rem 4rem 0 0rem;
+}
+
+.sign-up__form:focus label {
+    color: rgb(255, 145, 0);
 }
 
 .sign-up__input {
@@ -141,26 +166,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-content: flex-end;
+    align-items: center;
     text-align: center;
     margin: .5rem 2rem;
     padding: 0 .5rem;
     color: #3b3b3b;
+    position: relative;
+    border: 1px solid rgb(255, 145, 0);
+
 }
 
 .sign-up__gender p {
-    text-align: baseline;
-    margin-right: 4.5rem;
+    text-align: center;
+    margin-right: 4rem;
 }
 
 .sign-up__gender img {
     background: #ccc;
-    border-radius: 50%;
-    width: 1.5rem;
+    width: 2.5rem;
     aspect-ratio: 1;
     object-fit: scale-down;
-    padding: 0.3rem;
     margin: 0 .8rem;
+    border-radius: 50%;
     transition: background 1s ease-in-out;
 }
 
@@ -179,7 +206,7 @@ body {
 .sign-up__calendar__img {
     position: absolute;
     top: 1.4rem;
-    right: 2.5rem;
+    right: 3rem;
     cursor: pointer;
 }
 
@@ -202,17 +229,17 @@ body {
 
 .sign-up__membership p {
     text-align: baseline;
+    margin-right: 2rem;
+
 
 }
 
 .sign-up__membership img {
     background: #ccc;
-    border-radius: 50%;
-    width: 1.5rem;
+    width: 2.5rem;
     aspect-ratio: 1;
     object-fit: scale-down;
-    padding: 0.3rem;
-    margin: 0 .5rem;
+    border-radius: 50%;
     transition: background 1s ease-in-out;
 }
 
@@ -232,8 +259,10 @@ body {
 .form__button {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+    /* margin-bottom: 10px;
+    padding-bottom: 10px; */
+    text-transform: capitalize;
+    text-align: center;
 }
 
 .cancel__button {
@@ -260,6 +289,11 @@ body {
     margin-left: 10px;
 }
 
+/* end of sign up form  */
+
+
+
+/* media queries  */
 @media(max-width: 1024px) {
 
     .heading {
@@ -280,8 +314,8 @@ body {
 
     .profile__arrow {
         padding: 1rem;
-        width: 2vw;
-        height: 3vh;
+        width: 2rem;
+        height: 2rem;
     }
 }
 
@@ -305,8 +339,8 @@ body {
 
     .profile__arrow {
         padding: 1rem;
-        width: 2vw;
-        height: 1.9vh;
+        width: 2rem;
+        height: 2rem;
     }
 
     .slider__heading {
@@ -383,25 +417,232 @@ body {
     .main {
         width: 50vw;
         height: 100vh;
-        margin: 0;
         background-color: grey;
         display: flex;
         flex-direction: column;
         align-content: center;
-        margin: 0 10rem;
+        margin: 0 auto;
         overflow: visible;
     }
 
     .profile {
         width: 50vw;
         height: 100vh;
-        background-color: rgb(255, 213, 0);
+        margin: 0 auto;
         justify-content: center;
         align-content: center;
         text-align: center;
-        padding: .5rem;
+    }
+
+    .heading {
         color: #3b3b3b;
-        z-index: 4;
+        font-size: 1.4rem;
+    }
+
+    .profile__img {
+        margin: 1.5rem auto;
+
+    }
+
+    .profile__paragraph {
+        padding: 2rem 3rem;
+        font-size: .9rem;
+    }
+
+    .profile__arrow {
+        background: #3b3b3b;
+        border-radius: 50%;
+        padding: 1rem;
+        width: 1rem;
+        height: 1rem;
+        rotate: 90deg;
+        transition: rotate 1s ease-in-out;
+    }
+
+    .checkbox:checked~.profile .profile__arrow {
+        rotate: 270deg;
+    }
+
+    .slider {
+        width: 53.3vw;
+        height: 100vh;
+        margin: 0 auto;
+        justify-content: center;
+        align-content: center;
+        text-align: flex-start;
+        transform: translateY(-1000px);
+        padding: 1rem 0;
+    }
+
+    .slider__heading {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .slider__paragraph {
+        padding: 1rem 1rem;
+        line-height: 1.5rem;
+        margin: 0 0 3rem 0;
+        font-size: .9rem;
+    }
+
+
+    .checkbox:checked~.slider {
+        transform: translateY(0px);
+    }
+
+    .sign-up__container {
+        height: 0px;
+    }
+
+    .checkbox:checked~.sign-up__container {
+        transform: translateY(-1000px);
+    }
+
+    .sign-up__input {
+        padding: .5rem .5rem;
+        background-color: #ccc;
+        font-size: .7rem;
+        margin: .9rem 0;
+    }
+
+    .sign-up__label:focus {
+        color: rgb(255, 145, 0);
+    }
+
+    .sign-up__gender {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin: 0 .5rem .5rem .5rem;
+        font-size: .8rem;
+        padding: 0 .5rem;
+        color: #ccc;
+
+    }
+
+    .sign-up__label--male {
+        grid-column: 1 /2;
+        grid-row: 2/3;
+    }
+
+    .sign-up__label--female {
+        grid-column: 2 /3;
+        grid-row: 2/3;
+    }
+
+    .sign-up__gender p {
+        text-align: flex-start;
+        font-size: .8rem;
+        margin-right: 1.5rem;
+        color: #3b3b3b;
+    }
+
+    .sign-up__gender img {
+        background: #ccc;
+        height: 1rem;
+        width: 1rem;
+        padding: .3rem;
+        border-radius: 50%;
+        transition: background 1s ease-in-out;
+    }
+
+    .sign-up__input--male:checked~.click--male img {
+        background: rgb(242, 242, 242);
+    }
+
+    .sign-up__input--female:checked~.click--female img {
+        background: rgb(242, 242, 242);
+    }
+
+    .sign-up__calendar__img {
+        top: 2.2rem;
+        right: 2.4rem;
+
+    }
+
+    .sign-up__membership {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: 0 .5rem .8rem 1rem;
+        font-size: .8rem;
+        padding: 0 0 0 1rem;
+        color: #ccc;
+        text-transform: capitalize;
+        text-align: start;
+    }
+
+    .sign-up__label--classic {
+        grid-column: 1 /2;
+        grid-row: 2/3;
+    }
+
+    .sign-up__label--silver {
+        grid-column: 2 /3;
+        grid-row: 2/3;
+    }
+
+    .sign-up__label--gold {
+        grid-column: 1 /2;
+        grid-row: 3/4;
+        right: 1.5rem;
+
+    }
+
+    .sign-up__membership p {
+        text-align: flex-start;
+        font-size: .8rem;
+        color: #3b3b3b;
+        right: -1rem;
+    }
+
+    .sign-up__membership img {
+        background: #ccc;
+        height: 1rem;
+        width: 1rem;
+        padding: .3rem;
+        border-radius: 50%;
+        transition: background 1s ease-in-out;
+    }
+
+    .sign-up__input--classic:checked~.click--classic img {
+        background: rgb(242, 242, 242);
+
+    }
+
+    .sign-up__input--silver:checked~.click--silver img {
+        background: rgb(242, 242, 242);
+
+    }
+
+    .sign-up__input--gold:checked~.click--gold img {
+        background: rgb(242, 242, 242);
+
+    }
+
+    .form__button {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        justify-items: flex-start;
+        width: 95%;
+        overflow: hidden;
+    }
+
+    .cancel__button {
+        margin-right: 0px;
+
+    }
+
+    .save__button {
+        margin-top: .5rem;
+        margin-left: 0px;
+
+
     }
 
 }
+
+/* end of media queries  */
